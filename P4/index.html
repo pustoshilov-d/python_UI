@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section id="1">
+ <script type="text/javascript">
+        function new_year(chose) {
+            var img = document.getElementById("img");
+            if (chose == "s1") {img.src = "https://www.openbusiness.ru/upload/iblock/4ea/u4vy78458459.jpg"};
+            if (chose == "s2") {img.src = "https://opt-222221.ssl.1c-bitrix-cdn.ru/upload/medialibrary/646/santa1.jpg?1554212547437607"};
+            if (chose == "s3") {img.src = "http://geo-storm.ru/upload/information_system_19/2/7/1/item_2719/information_items_2719.jpg"};
+        }
+    </script>
+
+    <p><select name="select" onchange="new_year(this.options[this.selectedIndex].value)" >
+        <option selected value="s1">Дед мороз</option>
+        <option value="s2">Санта Клаус</option>
+        <option value="s3">Пер Ноэль</option>
+    </select></p>
+    <p><img id="img" src="">
+
+</section>
+
+<section id="2">
+    <script type="text/javascript">
+        function refresh() {
+            var chose = document.getElementsByName('r1');
+             document.getElementById('img_2').src = chose[0].checked ? "http://www.vokrugsveta.ru/img/cmn/2014/11/26/007.jpg" : "https://icdn.lenta.ru/images/2019/01/14/10/20190114105505115/pic_67408aa3a58b506a11bc77050012cc5b.png"
+        }
+    </script>
+
+    <input name="r1" type="radio" value="5" onchange="refresh()"> Курица <input name="r1" type="radio" value="13" onchange="refresh()"> Яйцо
+    <p><img id="img_2" src="">
+
+</section>
+
+<section id="3">
+    <script type="text/javascript">
+        function bin(num) {
+            num = parseInt(num)
+            cells = document.getElementsByName("cell")
+            if ((num<0) || (num>255))
+            {
+                document.getElementById("input_3").value = "Введите значение от 0 до 255!"
+            }
+            num = num.toString(2)
+                for (i=7; i=>0;i--){
+                    cells[i].innerHTML = (num[num.length-1-(7-i)] === undefined) ? "" : num[num.length-1-(7-i)];
+
+                }
+        }
+    </script>
+
+
+    <b>Введите целое число от 0 до 255 и нажмите ОК</b>
+    <p><input id="input_3" value = "0">
+    <p><button id="but" onclick="bin(document.getElementById('input_3').value)">ОК</button>
+    <b>Число в двичном преставлении</b>
+    <table id="table" border="1">
+        <tr><th>Вес бита</th><th>128</th><th>64</th><th>32</th><th>16</th><th>8</th><th>4</th><th>2</th><th>1</th></tr>
+         <tr><th>Значение</th><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td><td name="cell"> </td></tr>
+    </table>
+
+
+</section>
+
+
+<section id="4">
+
+<p>
+    <img src="img_4.png" width="200">
+</p>
+
+</section>
+
+</body>
+</html>

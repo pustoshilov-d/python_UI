@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <input id="a">
+<input id="b">
+ <script>function f(){
+     const a = parseInt(document.getElementById('a').value) ;
+     const b = parseInt(document.getElementById('b').value) ;
+     console.log(a,b)
+     document.getElementById('res').innerHTML = 'Результат: ' +(Math.pow(a,2)-Math.pow(b,3))}
+ </script>
+<button id="but" onclick="f()">Вычислить</button>
+ <b id="res">Результат: </b>
+</body>
+</html>
